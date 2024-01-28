@@ -1,0 +1,284 @@
+{
+    "frameworks": 
+    [
+        "Vue",
+        "Next.js",
+        "svelte"
+    ],
+    "dependencies": 
+    {
+        "Vue": 
+        [
+            {
+                "name": "vuex",
+                "category": "State Management",
+                "purpose": "State management pattern + library for Vue.js applications",
+                "usage": "Manages state in large Vue applications, providing a centralized store for all components"
+            },
+            {
+                "name": "vue-router",
+                "category": "Routing",
+                "purpose": "The official router for Vue.js",
+                "usage": "Handles navigation in Vue applications, allowing for dynamic routing and views"
+            },
+            {
+                "name": "vuetify",
+                "category": "UI Component Framework",
+                "purpose": "Material Component Framework for Vue.js",
+                "usage": "Provides a wide range of customizable UI components following Material Design guidelines"
+            },
+            {
+                "name": "nuxt.js",
+                "category": "Framework",
+                "purpose": "Intuitive Vue framework for building server-side rendered applications",
+                "usage": "Simplifies the process of building universal or static-generated Vue.js applications"
+            },
+            {
+                "name": "vue-cli",
+                "category": "CLI Tool",
+                "purpose": "Standard Tooling for Vue.js Development",
+                "usage": "Offers a quick setup for new Vue projects with various configurations and build tools"
+            },
+            {
+                "name": "vue-test-utils",
+                "category": "Testing",
+                "purpose": "Official unit testing utility library for Vue.js",
+                "usage": "Facilitates writing unit tests for Vue components in an easy and accessible manner"
+            },
+            {
+                "name": "vue-i18n",
+                "category": "Internationalization",
+                "purpose": "Internationalization plugin for Vue.js",
+                "usage": "Enables easy integration of multi-language support into Vue applications"
+            },
+            {
+                "name": "vee-validate",
+                "category": "Form Validation",
+                "purpose": "Form validation library for Vue.js",
+                "usage": "Helps in managing form validation rules and messages in Vue applications"
+            },
+            {
+                "name": "vue-axios",
+                "category": "HTTP Client",
+                "purpose": "Small wrapper for integrating axios to Vuejs",
+                "usage": "Facilitates making HTTP requests from Vue applications using the Axios library"
+            },
+            {
+                "name": "quasar",
+                "category": "UI Component Framework",
+                "purpose": "High-performance Material Design component suite for Vue.js",
+                "usage": "Offers responsive and customizable components for building Vue apps with Material Design"
+            },
+            {
+                "name": "vuepress",
+                "category": "Static Site Generator",
+                "purpose": "Vue-powered Static Site Generator",
+                "usage": "Ideal for creating static websites and documentation with Vue components"
+            }
+        ],
+        "Next.js":
+        [
+            {
+                "name": "@next/bundle-analyzer",
+                "category": "Next.js Plugin",
+                "purpose": "Analyzes and visualizes the size of webpack output files",
+                "usage": "Helps in optimizing and understanding the bundle size of a Next.js application"
+            },
+            {
+                "name": "next-seo",
+                "category": "Next.js Plugin",
+                "purpose": "Simplifies managing SEO (Search Engine Optimization) in Next.js applications",
+                "usage": "Provides a set of SEO components for managing metadata and social media tags"
+            },
+            {
+                "name": "next-auth",
+                "category": "Next.js Plugin",
+                "purpose": "Adds authentication support to Next.js applications",
+                "usage": "Simplifies the implementation of authentication with various providers"
+            },
+            {
+                "name": "next-i18next",
+                "category": "Next.js Plugin",
+                "purpose": "Provides internationalization (i18n) support in Next.js applications",
+                "usage": "Makes it easy to translate and switch between different languages"
+            },
+            {
+                "name": "styled-components",
+                "category": "CSS-in-JS Library",
+                "purpose": "Allows writing actual CSS code to style React components",
+                "usage": "Helps in building small, reusable, and maintainable CSS for React components"
+            },
+            {
+                "name": "tailwindcss",
+                "category": "CSS Framework",
+                "purpose": "A utility-first CSS framework for rapidly building custom designs",
+                "usage": "Provides low-level utility classes to build custom designs without writing CSS"
+            },
+            {
+                "name": "@emotion/react",
+                "category": "CSS-in-JS Library",
+                "purpose": "Library for writing CSS styles with JavaScript",
+                "usage": "Allows the styling of components in a way that leverages the power of JavaScript"
+            },
+            {
+                "name": "@emotion/styled",
+                "category": "CSS-in-JS Library",
+                "purpose": "A styled API for @emotion/react for defining component styles",
+                "usage": "Used for creating React components that have styles attached to them"
+            },
+            {
+                "name": "eslint-plugin-next",
+                "category": "Linting Tool",
+                "purpose": "Provides ESLint rules for Next.js projects",
+                "usage": "Helps in identifying and reporting on patterns in Next.js applications"
+            },
+            {
+                "name": "next-pwa",
+                "category": "Next.js Plugin",
+                "purpose": "Integrates PWA (Progressive Web App) support in Next.js applications",
+                "usage": "Simplifies the process of making a Next.js app work offline and load faster"
+            },
+            {
+                "name": "redux",
+                "category": "State Management Library",
+                "purpose": "A predictable state container for JavaScript applications",
+                "usage": "Helps in managing the state of an application in a consistent and centralized manner"
+            },
+            {
+                "name": "react-redux",
+                "category": "React Binding for Redux",
+                "purpose": "Official React bindings for Redux",
+                "usage": "Lets you use Redux with React effectively by connecting components to the Redux store"
+            },
+            {
+                "name": "next-sitemap",
+                "category": "Next.js Plugin",
+                "purpose": "Generates a sitemap for Next.js applications",
+                "usage": "Automates the creation of a sitemap, improving SEO and site indexing"
+            },
+            {
+                "name": "apollo-client",
+                "category": "GraphQL Client",
+                "purpose": "A comprehensive state management library for JavaScript that enables you to manage both local and remote data with GraphQL",
+                "usage": "Used to fetch, cache, and modify application data, all while automatically updating UI"
+            },
+            {
+                "name": "axios",
+                "category": "HTTP Client",
+                "purpose": "A promise-based HTTP client for making HTTP requests from node.js or XMLHttpRequests from the browser",
+                "usage": "Commonly used to perform CRUD operations and interact with APIs"
+            },
+            {
+                "name": "next-transpile-modules",
+                "category": "Next.js Plugin",
+                "purpose": "Transpile modules from `node_modules` in Next.js applications",
+                "usage": "Helps in including and using ES6 modules within a Next.js app"
+            },
+            {
+                "name": "next-compose-plugins",
+                "category": "Next.js Plugin",
+                "purpose": "Provides a cleaner way to organize Next.js plugins in your `next.config.js`",
+                "usage": "Simplifies the configuration of multiple plugins in Next.js"
+            },
+            {
+                "name": "next-images",
+                "category": "Next.js Plugin",
+                "purpose": "Import images in Next.js (e.g., jpg, jpeg, svg, png, gif)",
+                "usage": "Allows the use of images just like JavaScript modules"
+            },
+            {
+                "name": "next-mdx-remote",
+                "category": "Next.js Plugin",
+                "purpose": "Loads and renders MDX (Markdown for JSX) content from remote sources in Next.js",
+                "usage": "Enables the use of MDX content from external sources, such as a CMS"
+            },
+            {
+                "name": "dotenv",
+                "category": "Node.js Module",
+                "purpose": "Loads environment variables from a `.env` file into `process.env`",
+                "usage": "Provides a simple way to manage configuration settings and secrets in development and production"
+            },
+            {
+                "name": "next-redux-wrapper",
+                "category": "Next.js Plugin",
+                "purpose": "Integrates Redux with Next.js",
+                "usage": "Makes it easier to use Redux within a Next.js application, especially for server-rendered pages"
+            },
+            {
+                "name": "swr",
+                "category": "React Hooks Library",
+                "purpose": "A React Hooks library for data fetching",
+                "usage": "Provides a way to fetch data in React components with built-in caching, revalidation, and error handling features"
+            }
+        ],
+        "svelte": 
+        [
+            {
+                "name": "svelte/store",
+                "category": "State Management",
+                "purpose": "Provides state management within Svelte applications",
+                "usage": "Allows the creation of writable, readable, and derived stores for managing reactive state"
+            },
+            {
+                "name": "svelte-spa-router",
+                "category": "Routing",
+                "purpose": "Router for Single Page Applications (SPA) in Svelte",
+                "usage": "Enables navigation between different components/pages in a Svelte SPA"
+            },
+            {
+                "name": "svelte-preprocess",
+                "category": "Preprocessor",
+                "purpose": "Allows using TypeScript, SCSS, and other languages within Svelte components",
+                "usage": "Provides a seamless integration of different languages and tools into Svelte components"
+            },
+            {
+                "name": "svelte-loader",
+                "category": "Webpack Loader",
+                "purpose": "Webpack loader for compiling Svelte components",
+                "usage": "Enables Webpack to process Svelte components and integrate them into a Webpack build pipeline"
+            },
+            {
+                "name": "svelte-routing",
+                "category": "Routing",
+                "purpose": "Provides a declarative way to define routes in Svelte applications",
+                "usage": "Used for creating and managing routes in Svelte apps, integrating with the Svelte reactivity system"
+            },
+            {
+                "name": "svelte-material-ui",
+                "category": "UI Component Library",
+                "purpose": "Svelte adaptation of Google's Material Design Components",
+                "usage": "Offers a wide range of ready-to-use UI components following Material Design principles for Svelte"
+            },
+            {
+                "name": "svelte-transition",
+                "category": "Animation",
+                "purpose": "Provides transition effects for Svelte components",
+                "usage": "Enables adding animations during the addition or removal of Svelte components in the DOM"
+            },
+            {
+                "name": "svelte-action",
+                "category": "DOM Enhancements",
+                "purpose": "Contains actions for enhancing DOM elements in Svelte",
+                "usage": "Allows attaching extra functionality or behavior to DOM elements in Svelte components"
+            },
+            {
+                "name": "svelte-select",
+                "category": "UI Component",
+                "purpose": "A select component for Svelte applications",
+                "usage": "Provides a customizable and reactive select dropdown component for Svelte apps"
+            },
+            {
+                "name": "svelte-i18n",
+                "category": "Internationalization",
+                "purpose": "Internationalization library for Svelte",
+                "usage": "Facilitates building multi-language Svelte applications with dynamic language switching"
+            },
+            {
+                "name": "svelte-headlessui",
+                "category": "UI Component Library",
+                "purpose": "Unstyled, fully accessible UI components for Svelte",
+                "usage": "Provides a set of unstyled, accessible components for building custom UIs with Svelte"
+            }
+        ]
+    }
+}
