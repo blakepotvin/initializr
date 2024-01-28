@@ -1,0 +1,3 @@
+[submodule "api/testnextautomatic"]
+	path = api/testnextautomatic
+	url = https://github.com/seaty6/testnextautomatic
