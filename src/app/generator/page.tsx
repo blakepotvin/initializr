@@ -48,7 +48,7 @@ export default function Page() {
 
   const handlePost = () => {
     console.log("entered")
-    fetch("https://gladly-adequate-muskrat.ngrok-free.app/create", {
+    fetch("http://localhost:5000/create/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -221,7 +221,16 @@ export default function Page() {
             Packages add additional functionality to your project, select the
             ones you&apos;d like to use and click Next when you&apos;re done!
           </p>
-          <button className="w-64 h-16 bg-blue-500 text-2xl" onClick={() => console.log("test")}>Submit</button>
+          <button onClick={() => {
+            console.log("test")
+            handlePost()
+            console.log("past post")
+          }}>Submit</button>
+          {/* <button className="w-64 h-16 bg-blue-500 text-2xl" onClick={() => {
+            console.log("test")
+            handlePost()
+            console.log("past post")
+          }}>Submit</button> */}
         </div>
         <div className="w-1/2 mt-4 mx-4 rounded-md">
           {Packages.map((pkg) => <div className="mt-2 mb-2 hover:scale-105" key={1}><Package  name={pkg.name} description={pkg.description}></Package></div>)}
