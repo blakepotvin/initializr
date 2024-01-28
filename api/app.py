@@ -4,17 +4,25 @@ from injection import assemble_repo
 from flask_cors import CORS, cross_origin
 
 api = Flask(__name__)
-cors = CORS(api)
-api.config['CORS_HEADERS'] = 'Content-Type'
+
+api_cors_config = {
+    "origins": ['http://localhost:3000'],
+    "methods": ['OPTIONS', 'GET', 'POST'],
+    "allow_headers": ["Authorization", "Content-Type"]
+}
+
+cors = CORS(api, resources={
+    r"/*": api_cors_config
+})
 
 @api.route('/')
-@cross_origin()
+#@cross_origin()
 def index():
     return json.dumps({'name': 'alice',
                        'email': 'alice@outlook.com'})
 
 @api.route('/frameworks')
-@cross_origin()
+#@cross_origin()
 def frameworks():
     with open('form_data.json') as fp:
         form_data = json.load(fp)
@@ -22,7 +30,7 @@ def frameworks():
     return jsonify(form_data['frameworks'])
 
 @api.route('/dependencies/<framework>')
-@cross_origin()
+#@cross_origin()
 def dependencies(framework):
     with open('form_data.json') as fp:
         form_data = json.load(fp)
@@ -35,9 +43,11 @@ def dependencies(framework):
     return jsonify(deps)
 
 @api.route('/create', methods=["POST"])
-@cross_origin()
+#@cross_origin()
 def create():
     req = request.get_json()
+
+    print(req)
 
     name, deps, ac_token = req['repo_name'], req['deps'], req['access_token']
 
@@ -46,4 +56,4 @@ def create():
     return jsonify({"status": "success", "repo_url": repo_url})
 
 if __name__ == "__main__":
-    api.run(debug=True)
+    api.run(host='0.0.0.0', debug=True)

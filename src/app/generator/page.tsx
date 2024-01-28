@@ -48,17 +48,19 @@ export default function Page() {
 
   const handlePost = () => {
     console.log("entered")
-    fetch("http://localhost:5000/create/", {
+    fetch("http://localhost:2222/create", {
+      //fetch("http://gladly-adequate-muskrat.ngrok-free.app/create/", {
       method: "POST",
+    mode: 'cors',
       headers: {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        access_token: "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",
-        repo_name: "new_test_repo",
-        deps: []
+        access_token: ,
+        repo_name: "Init13",
+        deps: ["next-seo"]
       })
-    }).then((res) => res.json()).then((data) => console.log(data)).catch((err) => console.log(err))
+    })
   }
 
   const handleScrollToElement = () => {
@@ -165,7 +167,7 @@ export default function Page() {
                 ></img>
               </Link>
             </button >
-            <button onClick={() => setFramework("vue")} className="flex flex-col justify-center items-center w-full h-full backdrop-blur-2xl border-neutral-100 border hover:scale-105 hover:z-50 transition-all rounded-lg">
+            {/* <button onClick={() => setFramework("vue")} className="flex flex-col justify-center items-center w-full h-full backdrop-blur-2xl border-neutral-100 border hover:scale-105 hover:z-50 transition-all rounded-lg">
               <Link
                 activeClass="active"
                 to={"third"}
@@ -178,7 +180,7 @@ export default function Page() {
                   src="https://assets.stickpng.com/images/58482acecef1014c0b5e4a1e.png"
                 ></img>
               </Link>
-            </button>
+            </button> */}
             <button onClick={() => setFramework("svelte")} className="flex flex-col justify-center items-center w-full h-full backdrop-blur-2xl border-neutral-100 border hover:scale-105 hover:z-50 transition-all rounded-lg">
               <Link
                 activeClass="active"
@@ -221,7 +223,7 @@ export default function Page() {
             Packages add additional functionality to your project, select the
             ones you&apos;d like to use and click Next when you&apos;re done!
           </p>
-          <button onClick={() => {
+            <button className="w-64 h-16 bg-blue-500 text-2xl" onClick={() => {
             console.log("test")
             handlePost()
             console.log("past post")
