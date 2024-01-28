@@ -24,7 +24,7 @@ body {
   color: rgb(var(--foreground-rgb));
   /* background-repeat: no-repeat; */
   background-size:cover;
-  overflow: hidden;
+  /* overflow: hidden; */
   /* background: #171717; */
 }
 
