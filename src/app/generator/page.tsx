@@ -1,13 +1,18 @@
 "use client";
 import Package from "@/app/components/Package";
 import { animate } from "framer-motion";
-import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type URLParams = {
   framework: string;
   [key: string]: string; // Add index signature
+};
+
+type Package = {
+  name: string;
+  description: string;
+  framework: string;
 };
 
 function lockScroll() {
@@ -16,7 +21,9 @@ function lockScroll() {
 
 export default function Page() {
   const router = useRouter();
-  const searchParams = useSearchParams();
+  const searchParams: URLParams = useSearchParams();
+  const [packages, setPackages] = useState<Package[]>([]);
+  const [displayedPackages, setDisplayedPackages] = useState([]);
   const ref = useRef<HTMLDivElement>(null);
 
   const updateSearchParameters = (newParams: URLParams) => {
@@ -44,13 +51,23 @@ export default function Page() {
     });
   };
 
-  useEffect(() => lockScroll(), []);
+  useEffect(() => {
+    lockScroll();
+    setPackages(
+      await fetch("/api/packages")
+        .then((res) => res.json())
+        .catch((err) => console.log(err))
+    );
+  }, []);
 
   useEffect(() => {
     const element = document.getElementById("packages");
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
+    setDisplayedPackages(
+      packages.filter((pkg) => pkg.framework === searchParams.framework)
+    );
   }, [searchParams]);
 
   return (
