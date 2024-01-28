@@ -14,9 +14,11 @@ export default function Home() {
       <motion.div initial={{y:100, opacity: 0}} animate={{ y: 0, opacity: 1 }}
         transition={{ ease: "easeOut", duration: 1 }} className="text-8xl font-bold text-center max-w-4xl">Build Better NPM Projects, with <span className="text-blue-700">Fig.</span></motion.div>
 
-      <div className="text-3xl font-light text-center max-w-3xl text-gray-400">Easily configure and push your next NPM project, all without leaving your browser.</div>
+      <motion.div initial={{ y: 100, opacity: 0 }} animate={{ y: 0, opacity: 1 }}
+        transition={{ ease: "easeOut", duration: 1, delay: 1 }} className="text-3xl font-light text-center max-w-3xl text-gray-400">Easily configure and push your next NPM project, all without leaving your browser.</motion.div>
 
-      <GithubSignin />
+      <motion.div initial={{ y: 100, opacity: 0 }} animate={{ y: 0, opacity: 1 }}
+        transition={{ ease: "easeOut", duration: 1, delay: 2 }} ><GithubSignin /></motion.div>
 
       <p className="text-xs font-light absolute bottom-4">Built with ❤️ for <a href="https://spartahack-9.devpost.com/?ref_feature=challenge&ref_medium=your-open-hackathons&ref_content=Submissions+open">SpartaHack 9</a></p>
     </div>
