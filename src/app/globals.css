@@ -20,10 +20,11 @@
 
 
 body {
-  background-image: url('/bgsvg.svg');
+  background-image: url('/bgsvg2.svg');
   color: rgb(var(--foreground-rgb));
-  background-repeat: no-repeat;
-  background-size: cover;
+  /* background-repeat: no-repeat; */
+  background-size:cover;
+  /* overflow: hidden; */
   /* background: #171717; */
 }
 
