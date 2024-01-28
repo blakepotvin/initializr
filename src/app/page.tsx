@@ -1,11 +1,13 @@
 import { FaGithub } from "react-icons/fa";
+import { signIn } from "next-auth/react";
 import Image from "next/image";
+import GithubSignin from "./components/GithubSignin";
 
 export default function Home() {
   return (
     <div id="main">
       <div className="w-[800px] h-96 relative mt-56 ml-48">
-        <div className="">
+        <div>
           <span className="text-white text-6xl font-bold font-['Source Serif Pro']">
             Welcome to{" "}
           </span>
@@ -25,10 +27,7 @@ export default function Home() {
           a project name, select your framework and dependencies, and we&apos;ll
           take care of the rest!
         </div>
-        <button className="bg-black w-64 h-12 mt-8 flex items-center justify-center rounded-md">
-          <FaGithub className="mr-4" />
-          Connect with Github
-        </button>
+        <GithubSignin />
       </div>
     </div>
   );
