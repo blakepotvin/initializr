@@ -1,34 +1,24 @@
+"use client";
+
 import { FaGithub } from "react-icons/fa";
 import { signIn } from "next-auth/react";
 import Image from "next/image";
 import GithubSignin from "./components/GithubSignin";
 
+import { motion } from "framer-motion"
+
 export default function Home() {
   return (
-    <div id="main">
-      <div className="w-[800px] h-96 relative mt-56 ml-48">
-        <div>
-          <span className="text-white text-6xl font-bold font-['Source Serif Pro']">
-            Welcome to{" "}
-          </span>
-          <span className="text-purple-400 text-6xl font-bold font-['Source Serif Pro']">
-            Fig
-          </span>
-          <Image
-            alt="fig logo"
-            width={210}
-            height={167}
-            className="rotate-[-10.01deg] absolute -top-32 right-52"
-            src="/fig-logo.svg"
-          />
-        </div>
-        <div className="w-[500px] pt-12 text-neutral-500 text-2xl font-['Source Serif Pro']">
-          Fig helps you navigate and generate NPM projects with ease. Just pick
-          a project name, select your framework and dependencies, and we&apos;ll
-          take care of the rest!
-        </div>
-        <GithubSignin />
-      </div>
+    <div id="main" className="h-screen w-screen flex flex-col justify-center items-center gap-12">
+
+      <motion.div initial={{y:100, opacity: 0}} animate={{ y: 0, opacity: 1 }}
+        transition={{ ease: "easeOut", duration: 1 }} className="text-8xl font-bold text-center max-w-4xl">Build Better NPM Projects, with <span className="text-blue-700">Fig.</span></motion.div>
+
+      <div className="text-3xl font-light text-center max-w-3xl text-gray-400">Easily configure and push your next NPM project, all without leaving your browser.</div>
+
+      <GithubSignin />
+
+      <p className="text-xs font-light absolute bottom-4">Built with ❤️ for <a href="https://spartahack-9.devpost.com/?ref_feature=challenge&ref_medium=your-open-hackathons&ref_content=Submissions+open">SpartaHack 9</a></p>
     </div>
   );
 }

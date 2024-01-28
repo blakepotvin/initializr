@@ -11,7 +11,7 @@ export default function GithubSignin() {
   const handleSignIn = () => signIn();
 
   const buttonClass =
-    "bg-black w-64 h-12 mt-8 flex items-center justify-center rounded-md";
+    "bg-black pl-12 pr-12 h-20 mt-8 text-2xl flex items-center justify-center rounded-md";
 
   return (
     <button
